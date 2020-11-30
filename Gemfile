@@ -9,7 +9,7 @@ gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'rails-controller-testing'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg', '~> 1.0.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -50,6 +50,7 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen'
+  gem 'pg', '~> 1.0.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen'
@@ -67,7 +68,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg',             '0.17.1'
+  gem 'pg', '~> 1.0.0'
   gem 'rails_12factor', '0.0.2'
   gem 'puma', '~> 3.11'
 end
