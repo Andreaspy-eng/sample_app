@@ -24,5 +24,7 @@ require 'test_helper'
           follow_redirect!
         end
         assert_template 'users/show'
+        assert_select 'div#error_explanation'
+        assert_select 'div.field_with_errors'
       end
     end
